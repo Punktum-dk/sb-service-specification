@@ -1,0 +1,10 @@
+liste
+dk
+hostmaster
+DK
+Hostmaster
+TLSv
+SSL
+TLS
+DNS
+ccTLD
