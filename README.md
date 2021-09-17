@@ -2,6 +2,9 @@
 
 # DK Hostmaster Self-service Portal Service Specification
 
+[![Markdownlint Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml)
+[![Spellcheck Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml)
+
 X.X 2021-09-16
 Revision X.X
 
