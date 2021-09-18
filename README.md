@@ -2,8 +2,7 @@
 
 # DK Hostmaster Self-service Portal Service Specification
 
-[![Markdownlint Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml)
-[![Spellcheck Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml)
+[![Markdownlint Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml) [![Spellcheck Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml)
 
 X.X 2021-09-16
 Revision X.X
@@ -28,6 +27,8 @@ Revision X.X
   - [Mailing list](#mailing-list)
   - [Issue Reporting](#issue-reporting)
 - [Appendices](#appendices)
+  - [Privilege Matrix for Registrant Managed Objects](#privilege-matrix-registrant-managed-objects)
+  - [Privilege Matrix for Registrar Managed Objects](#privilege-matrix-registrar-managed-objects)
 
 <!-- /MarkdownTOC -->
 
@@ -45,7 +46,9 @@ The document is targeted at registrars as audience.
 
 This specification describes version 5.X.X of the DK Hostmaster Self-service portal (SB). Future releases will be reflected in updates to this specification, please see the document history section below.
 
-The documentation is aimed at registrars for support of end-customers interacting with SB.
+The documentation is aimed at registrars for support of end-customers interacting with SB. The documentation is kept in English. The Self-service portals supports both Danish and English.
+
+Screenshots for depicting features can be seen bu clicking the :eye_speech_bubble: icon. In the documentation the English versions are linked and used, equivalent versions in Danish are available in the screenshots directory of this repository, see also: [References](#references).
 
 Do note that the specification describes the latest released service. Service version is listed in the Document History, so given changes implemented in the service are reflected in the specification.
 
@@ -122,14 +125,14 @@ Please see the [information page][DKHMMAIL] for details on subscribing etc.
 
 ### Authorise Change Name Servers
 
-1. Log in to the self-service portal
-2. Find the domain name in the list of domain names you want to work on
-3. Click on the domain name to go to the detailed overview
-4. On the detail page, locate the section "Authorisations codes" on the right side of the page
-5. Click "Change Name Servers" to go to the page to generate the authorisation code
-6. Click "GENERATE CODE"
+1. Log in to the self-service portal [:eye_speech_bubble:](screenshots/SB-login-en.png)
+1. Find the domain name in the list of domain names you want to work on [:eye_speech_bubble:](screenshots/SB-filter-en.png)
+1. Click on the domain name to go to the detailed overview
+1. On the detail page, locate the section "Authorisations codes" on the right side of the page [:eye_speech_bubble:](screenshots/SB-details-en.png)
+1. Click "Change Name Servers" to go to the page to generate the authorisation code [:eye_speech_bubble:](screenshots/SB-change-ns-generate-en.png)
+1. Click "GENERATE CODE"
 
-A code is now generated, this code should be provided to the registrar or name server administrator to whom the user wants to use for name service.
+A code is now generated, this code should be provided to the registrar or name server administrator to whom the user wants to use for name service. [:eye_speech_bubble:](screenshots/SB-change-ns-generated-en.png)
 
 Once the code is in the possession of the registrar, it can be used to execute the actual.
 
@@ -145,14 +148,14 @@ The authorisation code works:
 
 ### Authorise Change Registrar
 
-1. Log in to the self-service portal
-2. Find the domain name in the list of domain names you want to work on
-3. Click on the domain name to go to the detailed overview
-4. On the detail page, locate the section "Authorisations codes" on the right side of the page
-5. Click "Change To Registrar Management" or "Change Registrar" to go to the page to generate the authorisation code
-6. Click "GENERATE CODE"
+1. Log in to the self-service portal [:eye_speech_bubble:](screenshots/SB-login-en.png)
+1. Find the domain name in the list of domain names you want to work on [:eye_speech_bubble:](screenshots/SB-filter-en.png)
+1. Click on the domain name to go to the detailed overview
+1. On the detail page, locate the section "Authorisations codes" on the right side of the page [:eye_speech_bubble:](screenshots/SB-details-en.png)
+1. Click "Change To Registrar Management" or "Change Registrar" to go to the page to generate the authorisation code
+1. Click "GENERATE CODE" [:eye_speech_bubble:](screenshots/SB-transfer-generate-en.png)
 
-A code is now generated, this code should be provided to the registrar to whom the registrant wants to transfer.
+A code is now generated, this code should be provided to the registrar to whom the registrant wants to transfer. [:eye_speech_bubble:](screenshots/SB-transfer-generated-en.png)
 
 Once the code is in the possession of the registrar, it can be used to execute the actual operation of transferring the domain name.
 
@@ -169,6 +172,8 @@ The authorisation code works:
 ## References
 
 List of references used in this document in alphabetical order.
+
+1. [DK Hostmaster: Self-service Portal Service Specification Screenshots](screenshots/)
 
 <a id="resources"></a>
 
@@ -192,7 +197,78 @@ For issue reporting related to this specification, the RP implementation or test
 
 <a id="appendices"></a>
 
+<a id="privilege-matrix-registrant-managed-objects"></a>
+
 ## Appendices
+
+### Privilege Matrix for Registrant Managed Objects
+
+| Command                                           | Registrant             | Registrar              | Domain name admin      | Domain name billing    | Name server admin           |
+| ------------------------------------------------- |:----------------------:|:----------------------:|:----------------------:|:----------------------:|:---------------------------:|
+| [Authenticate](#authenticate)                     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: \*1 | :white_check_mark: \*1 | :white_check_mark: \*1      |
+| [update domain](#update-domain)                   |                        |                        | :white_check_mark: \*2 |                        | :white_check_mark: \*2      |
+| add billing contact                               | :white_check_mark:     | :white_check_mark: \*8 | :white_check_mark: \*3 |                        |                             |
+| remove billing contact                            | :white_check_mark:     | :white_check_mark: \*4 | :white_check_mark: \*4 | :white_check_mark: \*4 |                             |
+| add admin contact                                 | :white_check_mark:     |                        | :white_check_mark: \*5 |                        |                             |
+| remove admin contact                              | :white_check_mark:     |                        | :white_check_mark: \*4 |                        |                             |
+| change registrant                                 | :white_check_mark:     |                        | :white_check_mark: \*6 |                        |                             |
+| approve name server                               | :white_check_mark:     |                        | :white_check_mark: \*6 |                        | :white_check_mark: \*6/\*10 |
+| _delete name server_                              | :white_check_mark:     |                        | :white_check_mark: \*6 |                        | :white_check_mark: \*6/\*10 |
+| add DSRECORDS                                     | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: \*10     |
+| remove DSRECORDS                                  | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: \*10     |
+| [renew domain](#renew-domain)                     | :white_check_mark:     |                        |                        | :white_check_mark:     |                             |
+| [delete domain](#delete-domain)                   | :white_check_mark:     |                        | :white_check_mark: \*6 |                        |                             |
+| [restore domain](#restore-domain)                 | :white_check_mark:     |                        | :white_check_mark:     |                        |                             |
+| [info domain](#info-domain)                       | :white_check_mark:     | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9      |
+| [update contact](#update-contact)                 | :white_check_mark:     | :white_check_mark: \*7 |                        |                        | :white_check_mark: \*7      |
+| [info contact](#info-contact)                     | :white_check_mark:     | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9      |
+| [create host](#create-host)                       | :white_check_mark:     | :white_check_mark:     |                        |                        | :white_check_mark:          |
+| [update host](#update-host)                       | :white_check_mark:     |                        |                        |                        | :white_check_mark:          |
+| [delete host](#delete-host)                       | :white_check_mark:     |                        |                        |                        | :white_check_mark:          |
+| [info host](#info-host)                           | :white_check_mark:     | :white_check_mark:     |                        |                        | :white_check_mark:          |
+| [Transfer Domain Name](#transfer-domain-name)     |                        |                        |                        |                        |                             |
+| Generate authorization for transfer               |                        |                        |                        |                        |                             |
+| Set period for domain name                        |                        |                        |                        |                        |                             |
+| Change Name Servers                               |                        |                        |                        |                        |                             |
+| Generate authorization for change of name servers |                        |                        |                        |                        |                             |
+
+<a id="privilege-matrix-registrar-managed-objects"></a>
+
+### Privilege Matrix for Registrar Managed Objects
+
+| Command                                           | Registrant             | Registrar              | Name server admin      |
+| ------------------------------------------------- | ---------------------- |:----------------------:|:----------------------:|
+| [Authenticate](#authenticate)                     | :white_check_mark:     | :white_check_mark: \*1 | :white_check_mark: \*2 |
+| [update domain](#update-domain)                   |                        | :white_check_mark: \*2 |                        |
+| Add billing contact                               |                        | :white_check_mark:     |                        |
+| Remove billing contact                            |                        | :white_check_mark:     |                        |
+| Add admin contact                                 |                        | :white_check_mark:     |                        |
+| Remove admin contact                              |                        | :white_check_mark:     |                        |
+| Change registrant                                 |                        | :white_check_mark:     |                        |
+| Approve name server                               |                        |                        |                        |
+| Add name server                                   |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
+| Remove name server                                |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
+| Add DSRECORDS                                     |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
+| Remove DSRECORDS                                  |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
+| Renew domain                                      |                        | :white_check_mark: \*7 |                        |
+| Delete domain                                     |                        | :white_check_mark: \*7 |                        |
+| Restore domain                                    |                        | :white_check_mark: \*7 |                        |
+| Info domain                                       | :white_check_mark:     | :white_check_mark: \*4 | :white_check_mark: \*4 |
+| Create contact                                    |                        | :white_check_mark:     | :white_check_mark:     |
+| Update contact                                    |                        | :white_check_mark: \*5 | :white_check_mark: \*6 |
+| Info contact                                      | :white_check_mark:     | :white_check_mark: \*4 | :white_check_mark: \*4 |
+| Create host                                       |                        | :white_check_mark: \*8 |                        |
+| Update host                                       |                        | :white_check_mark: \*8 | :white_check_mark: \*9 |
+| Delete host                                       |                        | :white_check_mark: \*8 | :white_check_mark: \*9 |
+| Info host                                         |                        | :white_check_mark:     | :white_check_mark:     |
+| Transfer Domain Name                              |                        | :white_check_mark:     |                        |
+| Generate authorization for transfer               | :white_check_mark:     | :white_check_mark:     |                        |
+| Set period for domain name                        |                        | :white_check_mark:     |                        |
+| Change Name Servers                               |                        | :white_check_mark:     |                        |
+| Generate authorization for change of name servers |                        | :white_check_mark:     |                        |
+
+- \*1 as registrar, WHOIS handles linked to a registrar account cannot authenticate towards SB, please the registrar portal or EPP service
+- \*2 as name server administrator, WHOIS handles linked to a registrar account cannot authenticate towards SB, please the registrar portal or EPP service
 
 [DKHMLOGO]: https://www.dk-hostmaster.dk/sites/default/files/dk-logo_0.png
 [DKHMMAIL]: https://www.dk-hostmaster.dk/en/mailing-lists
