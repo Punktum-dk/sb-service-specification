@@ -4,8 +4,8 @@
 
 [![Markdownlint Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml) [![Spellcheck Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml)
 
-X.X 2021-09-16
-Revision X.X
+2021-09-16
+Revision 5.0
 
 <!-- MarkdownTOC bracket=round levels="1,2,3,4,5" indent="  " autolink="true" autoanchor="true" -->
 
@@ -70,9 +70,9 @@ This document is copyright by DK Hostmaster A/S and is licensed under the MIT Li
 
 ### Document History
 
-X.X 2021-09-16
+5.0 2021-09-16
 
-- Initial revision
+- Initial revision of a technical specification for the self-service portal. Only a few features are documented
 - Describes service version 5.0.0
 
 <a id="the-dk-registry-in-brief"></a>
@@ -203,34 +203,41 @@ For issue reporting related to this specification, the RP implementation or test
 
 ### Privilege Matrix for Registrant Managed Objects
 
-| Command                                           | Registrant             | Registrar              | Domain name admin      | Domain name billing    | Name server admin           |
-| ------------------------------------------------- |:----------------------:|:----------------------:|:----------------------:|:----------------------:|:---------------------------:|
-| [Authenticate](#authenticate)                     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: \*1 | :white_check_mark: \*1 | :white_check_mark: \*1      |
-| [update domain](#update-domain)                   |                        |                        | :white_check_mark: \*2 |                        | :white_check_mark: \*2      |
-| add billing contact                               | :white_check_mark:     | :white_check_mark: \*8 | :white_check_mark: \*3 |                        |                             |
-| remove billing contact                            | :white_check_mark:     | :white_check_mark: \*4 | :white_check_mark: \*4 | :white_check_mark: \*4 |                             |
-| add admin contact                                 | :white_check_mark:     |                        | :white_check_mark: \*5 |                        |                             |
-| remove admin contact                              | :white_check_mark:     |                        | :white_check_mark: \*4 |                        |                             |
-| change registrant                                 | :white_check_mark:     |                        | :white_check_mark: \*6 |                        |                             |
-| approve name server                               | :white_check_mark:     |                        | :white_check_mark: \*6 |                        | :white_check_mark: \*6/\*10 |
-| _delete name server_                              | :white_check_mark:     |                        | :white_check_mark: \*6 |                        | :white_check_mark: \*6/\*10 |
-| add DSRECORDS                                     | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: \*10     |
-| remove DSRECORDS                                  | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: \*10     |
-| [renew domain](#renew-domain)                     | :white_check_mark:     |                        |                        | :white_check_mark:     |                             |
-| [delete domain](#delete-domain)                   | :white_check_mark:     |                        | :white_check_mark: \*6 |                        |                             |
-| [restore domain](#restore-domain)                 | :white_check_mark:     |                        | :white_check_mark:     |                        |                             |
-| [info domain](#info-domain)                       | :white_check_mark:     | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9      |
-| [update contact](#update-contact)                 | :white_check_mark:     | :white_check_mark: \*7 |                        |                        | :white_check_mark: \*7      |
-| [info contact](#info-contact)                     | :white_check_mark:     | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9 | :white_check_mark: \*9      |
-| [create host](#create-host)                       | :white_check_mark:     | :white_check_mark:     |                        |                        | :white_check_mark:          |
-| [update host](#update-host)                       | :white_check_mark:     |                        |                        |                        | :white_check_mark:          |
-| [delete host](#delete-host)                       | :white_check_mark:     |                        |                        |                        | :white_check_mark:          |
-| [info host](#info-host)                           | :white_check_mark:     | :white_check_mark:     |                        |                        | :white_check_mark:          |
-| [Transfer Domain Name](#transfer-domain-name)     |                        |                        |                        |                        |                             |
-| Generate authorization for transfer               |                        |                        |                        |                        |                             |
-| Set period for domain name                        |                        |                        |                        |                        |                             |
-| Change Name Servers                               |                        |                        |                        |                        |                             |
-| Generate authorization for change of name servers |                        |                        |                        |                        |                             |
+| Command                                           | Registrant             | Registrar              | Domain name proxy      | Domain name billing    | Name server admin  |
+| ------------------------------------------------- |:----------------------:|:----------------------:|:----------------------:|:----------------------:|:------------------:|
+| Authenticate                                      | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: |
+| Add billing contact                               | :white_check_mark:     | :white_check_mark: \*1 | :white_check_mark:     |                        |                    |
+| Remove billing contact                            | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: \*2 |                    |
+| Add proxy contact                                 | :white_check_mark:     |                        | :white_check_mark:     |                        |                    |
+| Remove proxy contact                              | :white_check_mark:     |                        | :white_check_mark: \*3 |                        |                    |
+| Change registrant                                 | :white_check_mark:     |                        | :white_check_mark:     |                        |                    |
+| Approve name server                               | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: |
+| Add DSRECORDS                                     | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: |
+| Remove DSRECORDS                                  | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: |
+| Renew domain                                      |                        |                        |                        | :white_check_mark:     |                    |
+| Cancel/Delete domain                              | :white_check_mark:     |                        |                        |                        |                    |
+| Restore domain \*4                                | :white_check_mark:     |                        |                        | :white_check_mar:      |                    |
+| Show domain                                       | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: |
+| Administer Name Server                            |                        |                        |                        |                        | :white_check_mark: |
+| Update user                                       | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: |
+| Show user \*5                                     | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: |
+| Show name server \*6                              | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     |                        | :white_check_mark: |
+| Create name server                                | :white_check_mark:     |                        |                        |                        | :white_check_mark: |
+| Delete name server                                | :white_check_mark: \*7 |                        |                        |                        | :white_check_mark: |
+| Transfer Domain Name                              | :white_check_mark: \*8 |                        |                        |                        |                    |
+| Generate authorization for transfer               | :white_check_mark:     |                        |                        |                        |                    |
+| Change period for domain name                     | :white_check_mark:     |                        | :white_check_mark:     | :white_check_mark:     |                    |
+| Change Name Servers                               |                        |                        |                        |                        | :white_check_mark: |
+| Generate authorization for change of name servers | :white_check_mark:     |                        | :white_check_mark:     |                        |                    |
+
+- \*1 a registrar has a special privilege to about the registrar as billing contact
+- \*2 the billing contact can remove oneself, not appoint another explicitly, the registrant is appointed the role of billing contact
+- \*3 the proxy contact can remove oneself, not appoint another explicitly, the registrant is appointed the role of proxy contact
+- \*4 this can be done anonymously, requires additional action from the registrant
+- \*5 users can see details on them selves and on other users they are related to
+- \*6 name servers details can only be seen by the name server administrator other users will see limited information
+- \*7 name servers can be deleted via a domain deletion, if subordinate
+- \*8 registrants can change back to registrant management from registrar management
 
 <a id="privilege-matrix-registrar-managed-objects"></a>
 
@@ -238,29 +245,25 @@ For issue reporting related to this specification, the RP implementation or test
 
 | Command                                           | Registrant             | Registrar              | Name server admin      |
 | ------------------------------------------------- | ---------------------- |:----------------------:|:----------------------:|
-| [Authenticate](#authenticate)                     | :white_check_mark:     | :white_check_mark: \*1 | :white_check_mark: \*2 |
-| [update domain](#update-domain)                   |                        | :white_check_mark: \*2 |                        |
+| Authenticate                                      | :white_check_mark:     | :white_check_mark: \*1 | :white_check_mark: \*2 |
 | Add billing contact                               |                        | :white_check_mark:     |                        |
 | Remove billing contact                            |                        | :white_check_mark:     |                        |
-| Add admin contact                                 |                        | :white_check_mark:     |                        |
-| Remove admin contact                              |                        | :white_check_mark:     |                        |
+| Add proxy contact                                 |                        | :white_check_mark:     |                        |
+| Remove proxy contact                              |                        | :white_check_mark:     |                        |
 | Change registrant                                 |                        | :white_check_mark:     |                        |
-| Approve name server                               |                        |                        |                        |
-| Add name server                                   |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
-| Remove name server                                |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
-| Add DSRECORDS                                     |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
-| Remove DSRECORDS                                  |                        | :white_check_mark: \*3 | :white_check_mark: \*3 |
-| Renew domain                                      |                        | :white_check_mark: \*7 |                        |
-| Delete domain                                     |                        | :white_check_mark: \*7 |                        |
-| Restore domain                                    |                        | :white_check_mark: \*7 |                        |
-| Info domain                                       | :white_check_mark:     | :white_check_mark: \*4 | :white_check_mark: \*4 |
-| Create contact                                    |                        | :white_check_mark:     | :white_check_mark:     |
-| Update contact                                    |                        | :white_check_mark: \*5 | :white_check_mark: \*6 |
-| Info contact                                      | :white_check_mark:     | :white_check_mark: \*4 | :white_check_mark: \*4 |
-| Create host                                       |                        | :white_check_mark: \*8 |                        |
-| Update host                                       |                        | :white_check_mark: \*8 | :white_check_mark: \*9 |
-| Delete host                                       |                        | :white_check_mark: \*8 | :white_check_mark: \*9 |
-| Info host                                         |                        | :white_check_mark:     | :white_check_mark:     |
+| _Approve name server_                             |                        |                        |                        |
+| Add DSRECORDS                                     |                        | :white_check_mark:     | :white_check_mark:     |
+| Remove DSRECORDS                                  |                        | :white_check_mark:     | :white_check_mark:     |
+| Renew domain                                      |                        | :white_check_mark:     |                        |
+| Cancel/Delete domain                              |                        | :white_check_mark:     |                        |
+| Restore domain                                    |                        | :white_check_mark:     |                        |
+| Show domain                                       | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     |
+| Administer name server                            |                        |                        | :white_check_mark:     |
+| Update user                                       | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     |
+| Show user                                         | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     |
+| Show name server                                  | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     |
+| Create name server                                |                        | :white_check_mark:     |                        |
+| Delete name server                                |                        | :white_check_mark:     | :white_check_mark:     |
 | Transfer Domain Name                              |                        | :white_check_mark:     |                        |
 | Generate authorization for transfer               | :white_check_mark:     | :white_check_mark:     |                        |
 | Set period for domain name                        |                        | :white_check_mark:     |                        |
