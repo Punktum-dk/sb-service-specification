@@ -177,9 +177,9 @@ The authorisation code works:
 1. Click on the domain name to go to the detailed overview
 1. On the detail page, locate the section "Manage domain name" on the right side of the page [:eye_speech_bubble:](screenshots/SB-details-en.png)
 1. Click "Change change name servers - external" or "Change change name servers - internal" to go to start the wizard to change the name servers
-1. First step displays the existing name servers, enter the primary name server you want to change to and click "CONTINUE" [:eye_speech_bubble:](screenshots/SB-transfer-generate-en.png)
-1. Second step displays the existing name servers and the newly located name servers, if the proposed change is acceptable click "CONTINUE" [:eye_speech_bubble:](screenshots/SB-transfer-generate-en.png)
-1. Third step displays the confirmation of the operation and the new name servers [:eye_speech_bubble:](screenshots/SB-transfer-generate-en.png)
+1. First step displays the existing name servers, enter the primary name server you want to change to and click "CONTINUE" [:eye_speech_bubble:](screenshots/SB-change_ns_external-en.png)
+1. Second step displays the existing name servers and the newly located name servers, if the proposed change is acceptable click "CONTINUE" [:eye_speech_bubble:](screenshots/SB-change_ns_external-confirm-en.png)
+1. Third step displays the confirmation of the operation and the new name servers [:eye_speech_bubble:](screenshots/SB-change_ns_external-confirmed-en.png)
 
 <a id="references"></a>
 
