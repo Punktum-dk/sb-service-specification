@@ -181,9 +181,9 @@ The authorisation code works:
 1. Second step displays the existing name servers and the newly located name servers, if the proposed change is acceptable click "CONTINUE" [:eye_speech_bubble:](screenshots/SB-change_ns_external-confirm-en.png)
 1. Third step displays the confirmation of the operation and the new name servers [:eye_speech_bubble:](screenshots/SB-change_ns_external-confirmed-en.png)
 
-For a name server change to be successfull, the following pre-conditions has to be met:
+For a name server change to be successful, the following pre-conditions has to be met:
 
-- The name server must be registered with DK Hostmaster in advance, by a registrar or name server adminstrator
+- The name server must be registered with DK Hostmaster in advance, by a registrar or name server administrator
 - The name server has to be active, it must not have pending operations or be marked for deletion
 - The name server has to respond for the domain name, see also: ["Required Responsiveness"](https://github.com/DK-Hostmaster/dkhm-name-service-specification#required-responsiveness) in the [DK Hostmaster Name Service specification][DKHMNSSPEC]
 - At least two name servers should respond, see also: ["Required Amount of Name Servers"](https://github.com/DK-Hostmaster/dkhm-name-service-specification#required-amount-of-name-servers) in the [DK Hostmaster Name Service specification][DKHMNSSPEC]
