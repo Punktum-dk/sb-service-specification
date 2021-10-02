@@ -175,11 +175,18 @@ The authorisation code works:
 1. Log in to the self-service portal [:eye_speech_bubble:](screenshots/SB-login-en.png)
 1. Find the domain name in the list of domain names you want to work on [:eye_speech_bubble:](screenshots/SB-filter-en.png)
 1. Click on the domain name to go to the detailed overview
-1. On the detail page, locate the section "Manage domain name" on the right side of the page [:eye_speech_bubble:](screenshots/SB-details-en.png)
+1. On the detail page, locate the section "Manage domain name" on the right side of the page [:eye_speech_bubble:](screenshots/SB-details2-en.png)
 1. Click "Change change name servers - external" or "Change change name servers - internal" to go to start the wizard to change the name servers
 1. First step displays the existing name servers, enter the primary name server you want to change to and click "CONTINUE" [:eye_speech_bubble:](screenshots/SB-change_ns_external-en.png)
 1. Second step displays the existing name servers and the newly located name servers, if the proposed change is acceptable click "CONTINUE" [:eye_speech_bubble:](screenshots/SB-change_ns_external-confirm-en.png)
 1. Third step displays the confirmation of the operation and the new name servers [:eye_speech_bubble:](screenshots/SB-change_ns_external-confirmed-en.png)
+
+For a name server change to be successfull, the following pre-conditions has to be met:
+
+- The name server must be registered with DK Hostmaster in advance, by a registrar or name server adminstrator
+- The name server has to be active, it must not have pending operations or be marked for deletion
+- The name server has to respond for the domain name, see also: ["Required Responsiveness"](https://github.com/DK-Hostmaster/dkhm-name-service-specification#required-responsiveness) in the [DK Hostmaster Name Service specification][DKHMNSSPEC]
+- At least two name servers should respond, see also: ["Required Amount of Name Servers"](https://github.com/DK-Hostmaster/dkhm-name-service-specification#required-amount-of-name-servers) in the [DK Hostmaster Name Service specification][DKHMNSSPEC]
 
 <a id="references"></a>
 
@@ -188,6 +195,7 @@ The authorisation code works:
 List of references used in this document in alphabetical order.
 
 1. [DK Hostmaster: Self-service Portal Service Specification Screenshots](screenshots/)
+1. [DK Hostmaster: Name Service Specification][DKHMNSSPEC]
 
 <a id="resources"></a>
 
@@ -289,3 +297,4 @@ For issue reporting related to this specification, the RP implementation or test
 
 [DKHMLOGO]: https://www.dk-hostmaster.dk/sites/default/files/dk-logo_0.png
 [DKHMMAIL]: https://www.dk-hostmaster.dk/en/mailing-lists
+[DKHMNSSPEC]: https://github.com/DK-Hostmaster/dkhm-name-service-specification
