@@ -36,7 +36,7 @@ Revision 5.0
 
 ## Introduction
 
-This document describes the registrar self-service portal (RP) offered by DK Hostmaster.
+This document describes the registrar self-service portal (SB) offered by DK Hostmaster.
 
 The document is targeted at registrars as audience.
 
@@ -141,7 +141,7 @@ The authorisation code works:
 - Only for a single domain name
 - Only for a single operation
 - Has a lifespan of 14 days
-- Can be replace with a new code
+- Can be replaced with a new code
 - Can be deleted, meaning the authorisation is retracted
 
 <a id="authorise-change-registrar"></a>
@@ -164,7 +164,7 @@ The authorisation code works:
 - Only for a single domain name
 - Only for a single operation
 - Has a lifespan of 14 days
-- Can be replace with a new code
+- Can be replaced with a new code
 - Can be deleted, meaning the authorisation is retracted
 
 <a id="references"></a>
