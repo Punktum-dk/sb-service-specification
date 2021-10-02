@@ -48,7 +48,7 @@ This specification describes version 5.X.X of the DK Hostmaster Self-service por
 
 The documentation is aimed at registrars for support of end-customers interacting with SB. The documentation is kept in English. The Self-service portals supports both Danish and English.
 
-Screenshots for depicting features can be seen bu clicking the :eye_speech_bubble: icon. In the documentation the English versions are linked and used, equivalent versions in Danish are available in the screenshots directory of this repository, see also: [References](#references).
+Screenshots for depicting features can be seen by clicking the :eye_speech_bubble: icon. In the documentation the English versions are linked and used, equivalent versions in Danish are available in the screenshots directory of this repository, see also: [References](#references).
 
 Do note that the specification describes the latest released service. Service version is listed in the Document History, so given changes implemented in the service are reflected in the specification.
 
