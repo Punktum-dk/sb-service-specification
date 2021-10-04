@@ -4,8 +4,8 @@
 
 [![Markdownlint Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml) [![Spellcheck Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml)
 
-2021-09-16
-Revision 5.0
+2021-10-04
+Revision 5.1
 
 <!-- MarkdownTOC bracket=round levels="1,2,3,4,5" indent="  " autolink="true" autoanchor="true" -->
 
@@ -70,6 +70,11 @@ This document is copyright by DK Hostmaster A/S and is licensed under the MIT Li
 <a id="document-history"></a>
 
 ### Document History
+
+5.1 2021-10-04
+
+- Added documentation for change of name servers initiated by registrant
+- Describes service version 5.1.0
 
 5.0 2021-09-16
 
