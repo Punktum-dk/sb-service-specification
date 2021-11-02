@@ -20,9 +20,12 @@ Revision 5.1
   - [Available Environments](#available-environments)
     - [production](#production)
 - [Features](#features)
-  - [Authorize Change Name Servers](#authorise-change-name-servers)
-  - [Authorize Change Registrar](#authorise-change-registrar)
-  - [Change Name Servers as Registrant](#change-name-servers-as-registrant)
+  - [Domain Names](#domain-names)
+    - [Renew Domain Name](#renew-domain-name)
+  - [Name Servers](#name-servers)
+    - [Authorize Change Name Servers](#authorise-change-name-servers)
+    - [Authorize Change Registrar](#authorise-change-registrar)
+    - [Change Name Servers as Registrant](#change-name-servers-as-registrant)
 - [References](#references)
 - [Resources](#resources)
   - [Mailing list](#mailing-list)
@@ -127,9 +130,23 @@ Please see the [information page][DKHMMAIL] for details on subscribing etc.
 
 ## Features
 
+<a id="domain-names"></a>
+
+### Domain Names
+
+<a id="renew-domain-name"></a>
+
+### Renew Domain Name
+
+
+
+<a id="name-servers"></a>
+
+### Name Servers
+
 <a id="authorise-change-name-servers"></a>
 
-### Authorise Change Name Servers
+#### Authorise Change Name Servers
 
 1. Log in to the self-service portal [:eye_speech_bubble:](screenshots/SB-login-en.png)
 1. Find the domain name in the list of domain names you want to work on [:eye_speech_bubble:](screenshots/SB-filter-en.png)
@@ -152,7 +169,7 @@ The authorisation code works:
 
 <a id="authorise-change-registrar"></a>
 
-### Authorise Change Registrar
+#### Authorise Change Registrar
 
 1. Log in to the self-service portal [:eye_speech_bubble:](screenshots/SB-login-en.png)
 1. Find the domain name in the list of domain names you want to work on [:eye_speech_bubble:](screenshots/SB-filter-en.png)
@@ -175,7 +192,7 @@ The authorisation code works:
 
 <a id="change-name-servers-as-registrant"></a>
 
-### Change Name Servers as Registrant
+#### Change Name Servers as Registrant
 
 1. Log in to the self-service portal [:eye_speech_bubble:](screenshots/SB-login-en.png)
 1. Find the domain name in the list of domain names you want to work on [:eye_speech_bubble:](screenshots/SB-filter-en.png)
