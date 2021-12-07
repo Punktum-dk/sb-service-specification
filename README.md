@@ -4,8 +4,8 @@
 
 [![Markdownlint Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml) [![Spellcheck Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml)
 
-2021-10-04
-Revision 5.1
+2021-12-07
+Revision 5.2
 
 <!-- MarkdownTOC bracket=round levels="1,2,3,4,5" indent="  " autolink="true" autoanchor="true" -->
 
@@ -70,6 +70,11 @@ This document is copyright by DK Hostmaster A/S and is licensed under the MIT Li
 <a id="document-history"></a>
 
 ### Document History
+
+5.2 2021-12-07
+
+- Updated documentation for: [Authorize Change Name Servers](#authorise-change-name-servers) with the new and improved token format
+- Updated documentation for: [Authorize Change Registrar](#authorise-change-registrar) with the new and improved token format
 
 5.1 2021-10-04
 
@@ -150,6 +155,32 @@ The authorisation code works:
 - Can be replaced with a new code
 - Can be deleted, meaning the authorisation is retracted
 
+An authorization token can be generated/issued for change of name servers by another name server administrator, where the receiving name server administrator via the token has the authorization to perform the operation.
+
+The authorization token has to be communicated out of band.
+
+The token has the format: `<role>-<operation>-<unique token>`
+
+An example: `NSA-REDEL-098f6bcd4621d373cade4e832627b4f6`
+
+- The authorization is generated/issued by a registrar (`NSA`, for name server administrator)
+- The authorization is for a transfer operation (`REDEL`, for redelegation)
+- and finally a unique key
+
+Since an authorization could also be issue by the registrant or proxy, those example would resemble the following:
+
+As registrant: `OWN-REDEL-098f6bcd4621d373cade4e832627b4f6`
+
+- The authorization is generated/issued by a registrant (`OWN`, for registrant/_owner_)
+- The authorization is for a transfer operation (`REDEL`)
+- and finally a unique key
+
+As proxy `PXY-REDEL-098f6bcd4621d373cade4e832627b4f6`
+
+- The authorization is generated/issued by a registrant (`PXY`, for proxy)
+- The authorization is for a transfer operation (`REDEL`)
+- and finally a unique key
+
 <a id="authorise-change-registrar"></a>
 
 ### Authorise Change Registrar
@@ -172,6 +203,24 @@ The authorisation code works:
 - Has a lifespan of 14 days
 - Can be replaced with a new code
 - Can be deleted, meaning the authorisation is retracted
+
+An authorization token can be generated/issued for transfer to another registrar, where the receiving registrar via the token has the authorization to perform the operation.
+
+The authorization token has to be communicated out of band.
+
+The token has the format: `<role>-<operation>-<unique token>`
+
+An example: `REG-TRANSFER-098f6bcd4621d373cade4e832627b4f6`
+
+- The authorization is generated/issued by a registrar (`REG`, for registrar)
+- The authorization is for a transfer operation (`TRANSFER`)
+- and finally a unique key
+
+Since an authorization could also be issue by the registrant, that example would resemble the following: `OWN-TRANSFER-098f6bcd4621d373cade4e832627b4f6`
+
+- The authorization is generated/issued by a registrant (`OWN`, for registrant/_owner_)
+- The authorization is for a transfer operation (`TRANSFER`)
+- and finally a unique key
 
 <a id="change-name-servers-as-registrant"></a>
 
