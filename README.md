@@ -59,7 +59,7 @@ This document is owned and maintained by DK Hostmaster A/S and must not be distr
 
 All examples provided in the document are fabricated or changed from real data to demonstrate request and operations etc. any resemblance to actual data are coincidental.
 
-This document is not the authoritative source for business and policy rules and possible discrepancies between this an any authoritative sources are regarded as errors in this document. This document is aimed at being the external technical specification and describes the implementation facing the users and is an interpretation of authoritative sources and can therefor be erroneous.
+This document is not the authoritative source for business and policy rules and possible discrepancies between this an any authoritative sources are regarded as errors in this document. This document is aimed at being the external technical specification and describes the implementation facing the users and is an interpretation of authoritative sources and can therefore be erroneous.
 
 <a id="license"></a>
 
@@ -292,7 +292,7 @@ For issue reporting related to this specification, the RP implementation or test
 | Remove DSRECORDS                                  | :white_check_mark:     |                        | :white_check_mark:     |                        | :white_check_mark: |
 | Renew domain                                      |                        |                        |                        | :white_check_mark:     |                    |
 | Cancel/Delete domain                              | :white_check_mark:     |                        |                        |                        |                    |
-| Restore domain \*4                                | :white_check_mark:     |                        |                        | :white_check_mar:      |                    |
+| Restore domain \*4                                | :white_check_mark:     |                        |                        | :white_check_mark:      |                    |
 | Show domain                                       | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: |
 | Administer Name Server                            |                        |                        |                        |                        | :white_check_mark: |
 | Update user                                       | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark:     | :white_check_mark: |
