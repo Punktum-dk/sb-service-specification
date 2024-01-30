@@ -1,8 +1,6 @@
-![DK Hostmaster Logo][DKHMLOGO]
+# Punktum dk Self-service Portal Service Specification
 
-# DK Hostmaster Self-service Portal Service Specification
-
-[![Markdownlint Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/markdownlint.yml) [![Spellcheck Action](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/DK-Hostmaster/sb-service-specification/actions/workflows/spelling.yml)
+[![Markdownlint Action](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/markdownlint.yml) [![Spellcheck Action](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/spelling.yml)
 
 2021-12-07
 Revision 5.2
@@ -37,7 +35,7 @@ Revision 5.2
 
 ## Introduction
 
-This document describes the registrar self-service portal (SB) offered by DK Hostmaster.
+This document describes the registrar self-service portal (SB) offered by Punktum dk.
 
 The document is targeted at registrars as audience.
 
@@ -45,7 +43,7 @@ The document is targeted at registrars as audience.
 
 ### About this Document
 
-This specification describes version 5.X.X of the DK Hostmaster Self-service portal (SB). Future releases will be reflected in updates to this specification, please see the document history section below.
+This specification describes version 5.X.X of the Punktum dk Self-service portal (SB). Future releases will be reflected in updates to this specification, please see the document history section below.
 
 The documentation is aimed at registrars for support of end-customers interacting with SB. The documentation is kept in English. The Self-service portals supports both Danish and English.
 
@@ -55,7 +53,7 @@ Do note that the specification describes the latest released service. Service ve
 
 Any future additions and changes to the implementation are not within the scope of this document and will not be discussed or mentioned throughout this document.
 
-This document is owned and maintained by DK Hostmaster A/S and must not be distributed without this information.
+This document is owned and maintained by Punktum dk A/S and must not be distributed without this information.
 
 All examples provided in the document are fabricated or changed from real data to demonstrate request and operations etc. any resemblance to actual data are coincidental.
 
@@ -65,7 +63,7 @@ This document is not the authoritative source for business and policy rules and 
 
 ### License
 
-This document is copyright by DK Hostmaster A/S and is licensed under the MIT License, please see the separate LICENSE file for details.
+This document is copyright by Punktum dk A/S and is licensed under the MIT License, please see the separate LICENSE file for details.
 
 <a id="document-history"></a>
 
@@ -90,13 +88,13 @@ This document is copyright by DK Hostmaster A/S and is licensed under the MIT Li
 
 ### The .dk Registry in Brief
 
-DK Hostmaster is the registry for the ccTLD for Denmark (dk). The current model used in Denmark is based on a sole registry, with DK Hostmaster maintaining the central DNS registry.
+Punktum dk is the registry for the ccTLD for Denmark (dk). The current model used in Denmark is based on a sole registry, with Punktum dk maintaining the central DNS registry.
 
 <a id="sb-in-brief"></a>
 
 ## SB in Brief
 
-SB is a web based service aimed at registrants and other non-registrar end-users, for interacting with the DK Hostmaster registry.
+SB is a web based service aimed at registrants and other non-registrar end-users, for interacting with the Punktum dk registry.
 
 <a id="sb-service"></a>
 
@@ -114,7 +112,7 @@ The SB service supports the following protocols for transport security:
 
 ### Available Environments
 
-DK Hostmaster offers the following two environments:
+Punktum dk offers the following two environments:
 
 - production
 
@@ -237,10 +235,10 @@ Since an authorization could also be issue by the registrant, that example would
 
 For a name server change to be successful, the following pre-conditions has to be met:
 
-- The name server must be registered with DK Hostmaster in advance, by a registrar or name server administrator
+- The name server must be registered with Punktum dk in advance, by a registrar or name server administrator
 - The name server has to be active, it must not have pending operations or be marked for deletion
-- The name server has to respond for the domain name, see also: ["Required Responsiveness"](https://github.com/DK-Hostmaster/dkhm-name-service-specification#required-responsiveness) in the [DK Hostmaster Name Service specification][DKHMNSSPEC]
-- At least two name servers should respond, see also: ["Required Amount of Name Servers"](https://github.com/DK-Hostmaster/dkhm-name-service-specification#required-amount-of-name-servers) in the [DK Hostmaster Name Service specification][DKHMNSSPEC]
+- The name server has to respond for the domain name, see also: ["Required Responsiveness"](https://github.com/Punktum-dk/dkhm-name-service-specification#required-responsiveness) in the [Punktum dk Name Service specification][DKHMNSSPEC]
+- At least two name servers should respond, see also: ["Required Amount of Name Servers"](https://github.com/Punktum-dk/dkhm-name-service-specification#required-amount-of-name-servers) in the [Punktum dk Name Service specification][DKHMNSSPEC]
 
 <a id="references"></a>
 
@@ -248,20 +246,20 @@ For a name server change to be successful, the following pre-conditions has to b
 
 List of references used in this document in alphabetical order.
 
-1. [DK Hostmaster: Self-service Portal Service Specification Screenshots](screenshots/)
-1. [DK Hostmaster: Name Service Specification][DKHMNSSPEC]
+1. [Punktum dk: Self-service Portal Service Specification Screenshots](screenshots/)
+1. [Punktum dk: Name Service Specification][DKHMNSSPEC]
 
 <a id="resources"></a>
 
 ## Resources
 
-A list of resources for the DK Hostmaster Self-service Portal support is located below.
+A list of resources for the Punktum dk Self-service Portal support is located below.
 
 <a id="mailing-list"></a>
 
 ### Mailing list
 
-DK Hostmaster operates a mailing list for technical discussion and inquiries about the DK Hostmaster offerings. To subscribe to this list, write to the address below and follow the instructions. Please note that the list is for technical discussion only, any issues beyond the technical scope will not be responded to, please send these to the contact issue reporting address below and they will be passed on to the appropriate entities within DK Hostmaster.
+Punktum dk operates a mailing list for technical discussion and inquiries about the Punktum dk offerings. To subscribe to this list, write to the address below and follow the instructions. Please note that the list is for technical discussion only, any issues beyond the technical scope will not be responded to, please send these to the contact issue reporting address below and they will be passed on to the appropriate entities within Punktum dk.
 
 - tech-discuss+subscribe@liste.dk-hostmaster.dk
 
@@ -351,4 +349,4 @@ For issue reporting related to this specification, the RP implementation or test
 
 [DKHMLOGO]: https://www.dk-hostmaster.dk/sites/default/files/dk-logo_0.png
 [DKHMMAIL]: https://www.dk-hostmaster.dk/en/mailing-lists
-[DKHMNSSPEC]: https://github.com/DK-Hostmaster/dkhm-name-service-specification
+[DKHMNSSPEC]: https://github.com/Punktum-dk/dkhm-name-service-specification
