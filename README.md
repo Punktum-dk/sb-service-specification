@@ -1,6 +1,6 @@
 # Punktum dk Self-service Portal Service Specification
 
-[![Markdownlint Action](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/markdownlint.yml) [![Spellcheck Action](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/spelling.yml/badge.svg)](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/spelling.yml)
+[![Markdownlint Action](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/markdownlint.yml/badge.svg)](https://github.com/Punktum-dk/sb-service-specification/actions/workflows/markdownlint.yml)
 
 2021-12-07
 Revision 5.2
